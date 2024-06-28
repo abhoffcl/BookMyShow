@@ -1,5 +1,5 @@
 package dev.Abhishek.BookMyShow.model.constant;
 
 public enum TicketStatus {
-    BOOKED,CANCELLED,IN_PROGRESS;
+     PENDING_PAYMENT, CONFIRMED, PAYMENT_FAILED, CANCELED
 }

@@ -1,6 +1,6 @@
 package dev.Abhishek.BookMyShow.model;
 
-import dev.Abhishek.BookMyShow.model.constant.MovieFeatures;
+import dev.Abhishek.BookMyShow.model.constant.MovieFeature;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -23,5 +23,5 @@ public class Movie extends BaseModel{
     private String review;
     private double rating;
     @Enumerated(EnumType.STRING)
-    private MovieFeatures movieFeatures;
+    private MovieFeature movieFeature;
 }

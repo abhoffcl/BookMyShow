@@ -14,7 +14,7 @@ public abstract class BaseModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="ID")
-    private UUID id;
+    private int id;
     @Column(name="CREATED_AT")
     private Instant createdAt;
     @Column(name="UPDATED_AT")

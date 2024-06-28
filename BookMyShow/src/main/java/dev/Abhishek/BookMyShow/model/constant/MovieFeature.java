@@ -1,6 +1,6 @@
 package dev.Abhishek.BookMyShow.model.constant;
 
-public enum MovieFeatures {
+public enum MovieFeature {
     IMAX,DOLBY,TWOD,THREED;
 
 }

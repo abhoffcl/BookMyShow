@@ -13,13 +13,13 @@ import java.util.List;
 public class Auditorium extends BaseModel{
     private String name;
     private int capacity;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.MERGE)
     @JoinColumn(name = "auditoriumId")
     private List<Seat> seats;
     @Enumerated(EnumType.STRING)
     @ElementCollection
     private List<AuditoriumFeatures>auditoriumFeatures;
-    @OneToMany(mappedBy = "auditorium")
+    @OneToMany(mappedBy = "auditorium",cascade = CascadeType.MERGE)
     private List<Show>shows;
 
 

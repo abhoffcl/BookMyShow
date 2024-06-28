@@ -1,9 +1,6 @@
 package dev.Abhishek.BookMyShow.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,7 +11,7 @@ import java.util.List;
 @Setter
 @Entity(name="BMS_SHOW")
 public class Show extends BaseModel{
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name="movieId")
     private Movie movie;
     @ManyToOne
@@ -22,6 +19,6 @@ public class Show extends BaseModel{
     private Auditorium auditorium;
     private Instant startTime;
     private Instant endTime;
-    @OneToMany(mappedBy = "show")
+    @OneToMany(mappedBy = "show",cascade = CascadeType.MERGE)
     private List<ShowSeat>showSeats;
 }
